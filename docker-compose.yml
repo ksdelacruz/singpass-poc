@@ -1,0 +1,16 @@
+services: 
+  react-ui:
+      build:
+        context: .
+      image: react/lhub-api
+      ports:
+        - "3001:3001"
+      stdin_open: true
+      volumes:
+        - .:/lhub-api
+        - react_node_modules:/lhub-api/node_modules
+      container_name: react_lhub_api
+volumes:
+  react_node_modules:
+    driver: local
+        

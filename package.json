@@ -1,0 +1,32 @@
+{
+  "name": "lhub-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "engines": {
+    "node": "^12.0"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "start:dev": "source .env-dev && nodemon",
+    "start:prod": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc"
+  },
+  "author": "API First Solutions<team@apifirstsolutions.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "hapi": "^18.1.0",
+    "lodash": "^4.17.21",
+    "querystring": "^0.2.1",
+    "superagent-bluebird-promise": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/hapi": "^18.0.5",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
